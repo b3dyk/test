@@ -1,5 +1,3 @@
-import 'ag-grid-community/styles//ag-grid.css';
-import 'ag-grid-community/styles//ag-theme-alpine.css';
 import CSVReader from 'react-csv-reader';
 import { DataTable } from './DataTable/DataTable';
 import { addTransactions } from 'redux/transactions/transactionsSlice';
