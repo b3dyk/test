@@ -13,3 +13,32 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.pagination {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  gap: 5px;
+  margin-bottom: 16px;
+}
+
+.page-num {
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: 400;
+  text-decoration: none;
+  color: #020332;
+}
+
+.page-num:hover {
+  background-color: #0d6efd;
+  color: #fff;
+}
+
+.pagination .active {
+  background-color: #0d6efd;
+  color: #fff;
+}
