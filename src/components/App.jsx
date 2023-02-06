@@ -1,13 +1,11 @@
-import CSVReader from 'react-csv-reader';
 import { DataTable } from './DataTable/DataTable';
-import { addTransactions } from 'redux/transactions/transactionsSlice';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { Filters } from './Filters/Filters';
 import { ExportButton } from './ExportButton/ExportButton';
 import { getTransactions } from 'redux/selectors';
+import { CSVReader } from './CSVReader/CSVReader';
 
 export const App = () => {
-  const dispatch = useDispatch();
   const data = useSelector(getTransactions);
 
   return (
@@ -19,7 +17,7 @@ export const App = () => {
 
         <Filters />
 
-        <CSVReader onFileLoaded={data => dispatch(addTransactions(data))} />
+        <CSVReader />
 
         <ExportButton />
 

@@ -1,8 +1,13 @@
 import ReactPaginate from 'react-paginate';
 
 import { useEffect, useState } from 'react';
-import { Table, Button } from 'react-bootstrap';
-import { ActionColumn, TableRow, Wrapper } from './DataTable.styled';
+import { Table } from 'react-bootstrap';
+import {
+  ActionColumn,
+  StyledButton,
+  TableRow,
+  Wrapper,
+} from './DataTable.styled';
 import { Modal } from 'components/Modal/Modal';
 import { DeleteCheck } from 'components/DeleteCheck/DeleteCheck';
 import { useDispatch, useSelector } from 'react-redux';
@@ -78,22 +83,22 @@ export const DataTable = () => {
                 <td key={data}>{data}</td>
               ))}
               <ActionColumn>
-                <Button
+                <StyledButton
                   variant="info"
                   type="button"
                   name="edit"
                   onClick={evt => handleClick({ id: row[0], evt })}
                 >
                   Edit
-                </Button>
-                <Button
+                </StyledButton>
+                <StyledButton
                   variant="danger"
                   type="button"
                   name="delete"
                   onClick={evt => handleClick({ id: row[0], evt })}
                 >
                   Delete
-                </Button>
+                </StyledButton>
               </ActionColumn>
             </TableRow>
           ))}

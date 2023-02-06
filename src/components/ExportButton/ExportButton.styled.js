@@ -9,7 +9,7 @@ export const StyledExport = styled(CSVLink)`
   background-color: #0d6efd;
   color: #fff;
   padding: 8px 16px;
-  border-radius: 4px;
+  border-radius: 6px;
 
   font-size: 1rem;
   font-weight: 400;
@@ -17,5 +17,6 @@ export const StyledExport = styled(CSVLink)`
 
   :hover {
     color: #fff;
+    background-color: #0b5ed7;
   }
 `;
