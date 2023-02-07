@@ -3,8 +3,8 @@
 To use this app you have to click **Transactions** link on the sidebar. Logo in
 The header working as return to home page. After Transactions page have opened
 you will see filters by **Status** and **Type** of transaction and two buttons
-that allows you to import local file and download existed with applied filters.
-Initial data will be fetched from server right after page is open.
+that allows you to **Import** local file and download existed with applied
+filters. Initial data will be fetched from server right after page is open.
 
 In the shown table there are two buttons to each item with the help of wich you
 can either **Edit** transaction status of **Delete** it. While editing
