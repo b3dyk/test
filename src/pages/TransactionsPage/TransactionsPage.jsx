@@ -3,7 +3,7 @@ import { getIsLoading, getTransactions } from 'redux/selectors';
 import { fetchTransactions } from 'redux/transactions/operations';
 import { useEffect } from 'react';
 import { Filters } from 'components/Filters/Filters';
-import { CSVReader } from 'components/CSVReader/CSVReader';
+import { ImportButton } from 'components/ImportButton/ImportButton';
 import { ExportButton } from 'components/ExportButton/ExportButton';
 import { DataTable } from 'components/DataTable/DataTable';
 import { BtnsGroup, ControlsGroup, Wrapper } from './TransactionsPage.styled';
@@ -23,7 +23,7 @@ export const TransactionsPage = () => {
         <Filters />
 
         <BtnsGroup>
-          <CSVReader />
+          <ImportButton />
 
           <ExportButton />
         </BtnsGroup>

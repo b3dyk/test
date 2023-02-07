@@ -3,7 +3,7 @@ import { useCSVReader } from 'react-papaparse';
 import { useDispatch } from 'react-redux';
 import { addTransactions } from 'redux/transactions/transactionsSlice';
 
-export const CSVReader = () => {
+export const ImportButton = () => {
   const dispatch = useDispatch();
   const { CSVReader } = useCSVReader();
 
