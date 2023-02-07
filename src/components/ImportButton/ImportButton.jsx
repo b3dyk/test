@@ -2,6 +2,7 @@ import { Button } from 'react-bootstrap';
 import { useCSVReader } from 'react-papaparse';
 import { useDispatch } from 'react-redux';
 import { addTransactions } from 'redux/transactions/transactionsSlice';
+import { FileName } from './ImportButton.styled';
 
 export const ImportButton = () => {
   const dispatch = useDispatch();
@@ -11,12 +12,10 @@ export const ImportButton = () => {
     <CSVReader onUploadAccepted={({ data }) => dispatch(addTransactions(data))}>
       {({ getRootProps, acceptedFile }) => (
         <>
-          <div>
-            <Button type="button" {...getRootProps()}>
-              Import
-            </Button>
-            <div>{acceptedFile && acceptedFile.name}</div>
-          </div>
+          <FileName>{acceptedFile && acceptedFile.name}</FileName>
+          <Button type="button" {...getRootProps()}>
+            Import
+          </Button>
         </>
       )}
     </CSVReader>

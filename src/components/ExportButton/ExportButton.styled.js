@@ -14,7 +14,8 @@ export const StyledExport = styled(CSVLink)`
   font-weight: 400;
   line-height: 1.5;
 
-  :hover {
+  :hover,
+  :focus {
     color: #fff;
     background-color: #0b5ed7;
   }

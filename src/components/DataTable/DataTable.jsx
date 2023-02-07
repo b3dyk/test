@@ -20,7 +20,7 @@ import {
 import { setFilteredTrancactions } from 'redux/transactions/transactionsSlice';
 
 export const DataTable = () => {
-  const data = useSelector(getTransactions);
+  const transactions = useSelector(getTransactions);
   const filter = useSelector(getFilter);
   const filteredTransactions = useSelector(getFilteredTransactions);
   const dispatch = useDispatch();
@@ -32,7 +32,7 @@ export const DataTable = () => {
   const itemsPerPage = 20;
 
   useEffect(() => {
-    const filteredTransactions = data.filter(item => {
+    const filteredTransactions = transactions.filter(item => {
       if (filter.status && !filter.type) {
         return item[1] === filter.status;
       }
@@ -48,7 +48,7 @@ export const DataTable = () => {
     });
 
     dispatch(setFilteredTrancactions(filteredTransactions));
-  }, [data, dispatch, filter.status, filter.type]);
+  }, [transactions, dispatch, filter.status, filter.type]);
 
   const endOffset = itemOffset + itemsPerPage;
   const currentItems = filteredTransactions.slice(itemOffset, endOffset);
@@ -71,7 +71,7 @@ export const DataTable = () => {
       <Table striped bordered hover size="sm">
         <thead>
           <tr>
-            {data[0]?.map(item => (
+            {transactions[0]?.map(item => (
               <th key={item}>{item}</th>
             ))}
             <th>Action</th>
