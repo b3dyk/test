@@ -5,10 +5,9 @@ export const StyledExport = styled(CSVLink)`
   display: inline-block;
   text-decoration: none;
   text-align: center;
-  min-width: 100px;
   background-color: #0d6efd;
   color: #fff;
-  padding: 8px 16px;
+  padding: 7px 16px;
   border-radius: 6px;
 
   font-size: 1rem;

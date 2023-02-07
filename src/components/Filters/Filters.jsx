@@ -3,6 +3,7 @@ import {
   setFilterStatus,
   setFilterType,
 } from 'redux/transactions/transactionsSlice';
+import { FiltersGroup } from './Filters.styled';
 
 export const Filters = () => {
   const dispatch = useDispatch();
@@ -16,7 +17,7 @@ export const Filters = () => {
   };
 
   return (
-    <>
+    <FiltersGroup>
       <select name="status" onChange={onStatusChange} defaultValue="Status">
         <option disabled>Status</option>
         <option value="">All</option>
@@ -31,6 +32,6 @@ export const Filters = () => {
         <option value="Refill">Refill</option>
         <option value="Withdrawal">Withdrawal</option>
       </select>
-    </>
+    </FiltersGroup>
   );
 };

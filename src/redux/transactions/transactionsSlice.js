@@ -1,12 +1,13 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { initialState } from 'redux/init-state';
+import { fetchTransactions } from './operations';
 
 const transactionsSlice = createSlice({
   name: 'transactions',
   initialState: initialState,
   reducers: {
     addTransactions(state, { payload }) {
-      state.transactions = [...state.transactions, ...payload];
+      state.transactions = payload;
     },
 
     deleteTransaction(state, { payload }) {
@@ -33,6 +34,23 @@ const transactionsSlice = createSlice({
 
     setFilteredTrancactions(state, { payload }) {
       state.filteredTransactions = [...payload];
+    },
+  },
+
+  extraReducers: {
+    [fetchTransactions.pending](state) {
+      state.isLoading = true;
+    },
+
+    [fetchTransactions.fulfilled](state, { payload }) {
+      state.isLoading = false;
+      state.error = null;
+      state.transactions = payload;
+    },
+
+    [fetchTransactions.rejected](state, { payload }) {
+      state.isLoading = false;
+      state.error = payload;
     },
   },
 });

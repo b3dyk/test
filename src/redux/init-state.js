@@ -5,4 +5,6 @@ export const initialState = {
     type: '',
   },
   filteredTransactions: [],
+  isLoading: false,
+  error: null,
 };
