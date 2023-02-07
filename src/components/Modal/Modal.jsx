@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { Backdrop, ModalWindow } from './Modal.styled';
 
 export const Modal = ({ children, onClose }) => {
@@ -11,4 +12,9 @@ export const Modal = ({ children, onClose }) => {
       <ModalWindow>{children}</ModalWindow>
     </Backdrop>
   );
+};
+
+Modal.propTypes = {
+  children: PropTypes.element.isRequired,
+  onClose: PropTypes.func.isRequired,
 };

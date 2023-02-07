@@ -9,6 +9,7 @@ export const TableRow = styled.tr`
 
 export const StyledButton = styled(Button)`
   display: none;
+  padding: 4px 8px;
 `;
 
 export const Wrapper = styled.div`
@@ -29,5 +30,5 @@ export const ActionColumn = styled.td`
   gap: 5px;
 
   min-width: 155px;
-  height: 50px;
+  height: 40px;
 `;

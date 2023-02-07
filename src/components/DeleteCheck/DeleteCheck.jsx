@@ -1,6 +1,8 @@
 import { useDispatch } from 'react-redux';
 import { deleteTransaction } from 'redux/transactions/transactionsSlice';
 import { Button } from 'react-bootstrap';
+import PropTypes from 'prop-types';
+
 import { BtnWrapper, Heading } from './DeleteCheck.styled';
 
 export const DeleteCheck = ({ id, onClose }) => {
@@ -24,4 +26,9 @@ export const DeleteCheck = ({ id, onClose }) => {
       </BtnWrapper>
     </>
   );
+};
+
+DeleteCheck.propTypes = {
+  id: PropTypes.string.isRequired,
+  onClose: PropTypes.func.isRequired,
 };

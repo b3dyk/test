@@ -22,7 +22,7 @@ import { setFilteredTrancactions } from 'redux/transactions/transactionsSlice';
 export const DataTable = () => {
   const data = useSelector(getTransactions);
   const filter = useSelector(getFilter);
-  const filteredTrans = useSelector(getFilteredTransactions);
+  const filteredTransactions = useSelector(getFilteredTransactions);
   const dispatch = useDispatch();
 
   const [currentId, setCurrentId] = useState('');
@@ -51,11 +51,12 @@ export const DataTable = () => {
   }, [data, dispatch, filter.status, filter.type]);
 
   const endOffset = itemOffset + itemsPerPage;
-  const currentItems = filteredTrans.slice(itemOffset, endOffset);
-  const pageCount = Math.ceil(filteredTrans.length / itemsPerPage);
+  const currentItems = filteredTransactions.slice(itemOffset, endOffset);
+  const pageCount = Math.ceil(filteredTransactions.length / itemsPerPage);
 
   const handlePageClick = event => {
-    const newOffset = (event.selected * itemsPerPage) % filteredTrans.length;
+    const newOffset =
+      (event.selected * itemsPerPage) % filteredTransactions.length;
     setItemOffset(newOffset);
   };
 
