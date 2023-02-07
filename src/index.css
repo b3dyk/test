@@ -1,5 +1,14 @@
 @import-normalize; /* bring in normalize.css styles */
 
+:root {
+  --color-btn-primary: #0d6efd;
+  --color-btn-primary-hover: #0b5ed7;
+  --color-text-white: #fff;
+  --color-text-primary: #020332;
+
+  --color-bg-secondary: #ececec;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

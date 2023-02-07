@@ -17,24 +17,24 @@ export const Header = styled.header`
 
 export const SideMenu = styled.div`
   height: 25vh;
-  background-color: #ececec;
+  background-color: var(--color-bg-secondary);
   padding: 8px;
 `;
 
 export const StyledNavLink = styled(NavLink)`
   text-decoration: none;
-  color: #020332;
+  color: var(--color-text-primary);
   padding: 4px 32px;
   border-radius: 6px;
 
   :hover,
   :focus {
-    background-color: #0d6efd;
-    color: #fff;
+    background-color: var(--color-btn-primary);
+    color: var(--color-text-white);
   }
 
   &.active {
-    background-color: #0d6efd;
-    color: #fff;
+    background-color: var(--color-btn-primary);
+    color: var(--color-text-white);
   }
 `;
