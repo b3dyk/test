@@ -13,7 +13,7 @@ export const StyledButton = styled(Button)`
 `;
 
 export const Wrapper = styled.div`
-  max-width: 700px;
+  width: 100%;
 `;
 
 export const StyledData = styled.td`

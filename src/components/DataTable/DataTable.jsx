@@ -1,5 +1,4 @@
 import ReactPaginate from 'react-paginate';
-
 import { useEffect, useState } from 'react';
 import { Table } from 'react-bootstrap';
 import {
