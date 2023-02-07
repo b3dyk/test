@@ -1,41 +1,9 @@
+
 # React test case
 
-**Рівень складності:** мінімальний досвід
 
-Необхідно створити React застосунок для управління транзакціями. Дати можливість
-користувачеві імпортувати список транзакцій із CSV файлу, змінювати статус
-транзакції, видалити транзакцію та експортувати відфільтрований список
-транзакцій у CSV файл.
+To use this app you have to click **Transactions** link on the sidebar. Logo in The header working as return to home page. After Transactions page have opened you will see filters by status and type of transaction and two buttons that allows you to import local file and download existed with applied filters. Initial data will be fetched from server right after page is open.
 
-## Функціонал:
+In the shown table there are two buttons to each item with the help of wich you can either edit transaction status of delete it. Pagination is also applied in a bid to table was short enough.
 
-1. При натисканні на кнопку імпорту у користувача відкривається діалог з
-   пропозицією завантажити CSV файл.
-2. При натисканні на кнопку експорту завантажити для користувача файл з основною
-   інформацію про транзакцію (колонки на вибір) по вибраним фільтрам (тип
-   транзакції, статус)
-3. На сторінку зі списком транзакції вивести дані разом з пагінацією, та при
-   виборі типу або статусу фільтрувати дані у таблиці.
-4. При натисканні на edit показати користувачеві модальне вікно з пропозицією
-   змінити статус транзакції та натиснути Save.
-5. При натисканні на delete показати користувачеві діалогове вікно з питанням чи
-   впевнений він, що хоче видалити цю транзакцію з бази даних.
-
-## Загальні вимоги до React:
-
-1. Використовувати **Redux** для зберігання та редагування даних,
-   використовувати **redux-saga** для отримання початкових тестових даних від
-   **mock-api** наприклад **axios-mock-adapter** або інше на вибір виконавця
-   (тестові являють собою початкову відповідь від mock серверу). Або
-   використовувати **react-query** за бажанням.
-2. Обов'язкове використання **TypeScript** та **react-hook-forms**.
-3. Використовувати UI Framework (**ChakraUI** або **React Bootstrap**).
-4. Обовʼязкове використання **Vite** (не використовувати CRA).
-5. Використання **redux-toolkit** та **styled-components** не є обов'язковим,
-   але буде плюсом.
-
-## Загальні вимоги до процесу
-
-1. Готовий код завантажити на **github**.
-2. Всі коментарі, код та загальна інформація в проекті має бути виконана
-   англійською мовою.
+If you apply filters coresponding data will be shown. If you need to dowload edited data with applied filters **Export** button is your way. It will download data to your computer and name of csv-file will contain applied filters.
