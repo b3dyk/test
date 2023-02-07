@@ -1,6 +1,11 @@
 import { Link, Outlet } from 'react-router-dom';
 import logo from '../../images/legiosoft.jpg';
-import { Header, StyledContainer, StyledNavLink } from './Layout.styled';
+import {
+  Header,
+  SideMenu,
+  StyledContainer,
+  StyledNavLink,
+} from './Layout.styled';
 
 export const Layout = () => {
   return (
@@ -14,9 +19,9 @@ export const Layout = () => {
       </Header>
       <main>
         <StyledContainer>
-          <aside>
+          <SideMenu>
             <StyledNavLink to="transactions">Transactions</StyledNavLink>
-          </aside>
+          </SideMenu>
           <Outlet />
         </StyledContainer>
       </main>

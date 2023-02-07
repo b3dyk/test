@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+export const Wrapper = styled.div`
+  min-width: 600px;
+`;
+
 export const ControlsGroup = styled.div`
   display: flex;
   justify-content: space-between;

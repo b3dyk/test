@@ -15,6 +15,12 @@ export const Header = styled.header`
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 `;
 
+export const SideMenu = styled.div`
+  height: 25vh;
+  background-color: #ececec;
+  padding: 8px;
+`;
+
 export const StyledNavLink = styled(NavLink)`
   text-decoration: none;
   color: #020332;

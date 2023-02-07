@@ -6,7 +6,7 @@ import { Filters } from 'components/Filters/Filters';
 import { CSVReader } from 'components/CSVReader/CSVReader';
 import { ExportButton } from 'components/ExportButton/ExportButton';
 import { DataTable } from 'components/DataTable/DataTable';
-import { BtnsGroup, ControlsGroup } from './TransactionsPage.styled';
+import { BtnsGroup, ControlsGroup, Wrapper } from './TransactionsPage.styled';
 
 export const TransactionsPage = () => {
   const isLoading = useSelector(getIsLoading);
@@ -18,7 +18,7 @@ export const TransactionsPage = () => {
   }, [dispatch]);
 
   return (
-    <div>
+    <Wrapper>
       <ControlsGroup>
         <Filters />
 
@@ -30,6 +30,6 @@ export const TransactionsPage = () => {
       </ControlsGroup>
 
       {isLoading ? <p>Loading...</p> : data.length > 0 && <DataTable />}
-    </div>
+    </Wrapper>
   );
 };
