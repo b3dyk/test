@@ -5,6 +5,7 @@ import { StyledExport } from './ExportButton.styled';
 export const ExportButton = () => {
   const filteredData = useSelector(getFilteredTransactions);
   const filter = useSelector(getFilter);
+
   return (
     <StyledExport
       data={filteredData}
